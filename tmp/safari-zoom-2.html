@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <style>
+      /* Uncommenting this fixes zoom in this case, but it causes other zoom issues.  See
+          https://bugs.webkit.org/show_bug.cgi?id=272339 */
+      /*
+      html {
+        -webkit-text-size-adjust: none;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <!-- The line-height gets zoomed but not the font-size resulting in overlapping text.
+         Remove the line-height to avoid overlapping (but still doesn't zoom).
+        -->
+    <div style="zoom: 0.3; font-size: 30px; line-height: 30px">
+      <!--
+        The width necessary to trigger the bug here seems to depend on the device and the zoom
+        level you set.  With 0.3 zoom, a width of 2915px triggers it on iPhone 15 Max simulator and
+        width of 2542px triggers it on iPhone SE (3rd gen) simulator.
+
+        Portrait or landscape doesn't matter, suggesting it's not just related to the viewport width.
+      -->
+      <div style="width: 6000px">
+        <div>Hello world</div>
+        <div>Goodbye</div>
+      </div>
+    </div>
+  </body>
+</html>
