@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bug repros with or without this meta tag. Just including it for better layout. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <style>
+      html {
+        /* If you remove this then zoom works correctly. */
+        -webkit-text-size-adjust: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="font-size: 20px">
+      This text is 20px.
+      <div style="zoom: 0.5">
+        <!-- If you change this font-size to 20px to match the parent, then it'll correctly zoom to 10px. -->
+        <div style="font-size: 40px">
+          This text should be 0.5 x 40px = 20px, but it is 40px.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
