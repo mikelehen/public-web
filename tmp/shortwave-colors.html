@@ -1,7 +1,13 @@
-<h2>Top Combination RGB Breakdown:</h2>
-<p style="font-size: 1.4rem">
+<ul style="font-size: 1.1rem">
+<li><b>NEW CONVERSION</b> - Michael's currently-implemented background color support.</li>
+<li><b>OLD CONVERSION</b> - Foreground-only support that's in prod.</li>
+<li><b>PROPOSED CONVERSION</b> - Michael's proposal for respecting certain background / foreground color combinations.</li>
+</ul>
+<h2>Color breakdowns</h2>
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(0, 0, 0)">NEW CONVERSION: ('GRAY', 'DEFAULT'):</span> 22.47%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('DEFAULT', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(244, 244, 240); color: rgb(0, 0, 0)">((244, 244, 240), (0, 0, 0)):</span> 15.92%<br/>
@@ -15,9 +21,10 @@
 <span style="background-color: rgb(246, 246, 239); color: rgb(51, 51, 51)">((246, 246, 239), (51, 51, 51)):</span> 3.21%<br/>
 <span style="background-color: rgb(0, 0, 0); color: rgb(49, 49, 49)">((0, 0, 0), (49, 49, 49)):</span> 3.14%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(0, 0, 0)">NEW CONVERSION: ('YELLOW', 'DEFAULT'):</span> 20.22%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('YELLOW', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 255, 0); color: rgb(0, 0, 0)">((255, 255, 0), (0, 0, 0)):</span> 31.97%<br/>
@@ -31,9 +38,10 @@
 <span style="background-color: rgb(255, 250, 205); color: rgb(34, 34, 34)">((255, 250, 205), (34, 34, 34)):</span> 1.41%<br/>
 <span style="background-color: rgb(255, 242, 204); color: rgb(60, 64, 67)">((255, 242, 204), (60, 64, 67)):</span> 1.34%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(142, 140, 153)">NEW CONVERSION: ('GRAY', 'LIGHT'):</span> 14.24%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(142, 140, 153)">PROPOSED CONVERSION ('DEFAULT', 'LIGHT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255)">((0, 0, 0), (255, 255, 255)):</span> 14.78%<br/>
@@ -47,9 +55,10 @@
 <span style="background-color: rgb(0, 0, 0); color: rgb(102, 102, 102)">((0, 0, 0), (102, 102, 102)):</span> 2.22%<br/>
 <span style="background-color: rgb(89, 21, 89); color: rgb(255, 255, 255)">((89, 21, 89), (255, 255, 255)):</span> 2.22%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(146, 180, 255); color: rgb(142, 140, 153)">NEW CONVERSION: ('BLUE', 'LIGHT'):</span> 13.59%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(146, 180, 255); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('BLUE', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(3, 169, 244); color: rgb(255, 255, 255)">((3, 169, 244), (255, 255, 255)):</span> 23.45%<br/>
@@ -63,9 +72,10 @@
 <span style="background-color: rgb(29, 160, 195); color: rgb(255, 255, 255)">((29, 160, 195), (255, 255, 255)):</span> 1.77%<br/>
 <span style="background-color: rgb(0, 82, 204); color: rgb(255, 255, 255)">((0, 82, 204), (255, 255, 255)):</span> 1.77%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(250, 136, 121); color: rgb(142, 140, 153)">NEW CONVERSION: ('RED', 'LIGHT'):</span> 3.47%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(250, 136, 121); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('RED', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 255)">((255, 0, 0), (255, 255, 255)):</span> 32.03%<br/>
@@ -79,9 +89,10 @@
 <span style="background-color: rgb(255, 89, 36); color: rgb(255, 255, 255)">((255, 89, 36), (255, 255, 255)):</span> 2.16%<br/>
 <span style="background-color: rgb(236, 95, 62); color: rgb(255, 255, 255)">((236, 95, 62), (255, 255, 255)):</span> 1.73%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(35, 108, 243)">NEW CONVERSION: ('YELLOW', 'BLUE'):</span> 2.75%<br/>
 <span style="color: rgb(35, 108, 243)">OLD CONVERSION: (DEFAULT, BLUE)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(35, 108, 243)">PROPOSED CONVERSION ('YELLOW', 'BLUE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 255, 0); color: rgb(31, 73, 125)">((255, 255, 0), (31, 73, 125)):</span> 36.07%<br/>
@@ -95,9 +106,10 @@
 <span style="background-color: rgb(255, 255, 0); color: rgb(68, 84, 106)">((255, 255, 0), (68, 84, 106)):</span> 2.19%<br/>
 <span style="background-color: rgb(255, 255, 0); color: rgb(26, 115, 232)">((255, 255, 0), (26, 115, 232)):</span> 1.64%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(35, 108, 243)">NEW CONVERSION: ('GRAY', 'BLUE'):</span> 2.60%<br/>
 <span style="color: rgb(35, 108, 243)">OLD CONVERSION: (DEFAULT, BLUE)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(35, 108, 243)">PROPOSED CONVERSION ('DEFAULT', 'BLUE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(0, 0, 0); color: rgb(66, 133, 244)">((0, 0, 0), (66, 133, 244)):</span> 12.14%<br/>
@@ -111,9 +123,10 @@
 <span style="background-color: rgb(244, 244, 244); color: rgb(0, 123, 255)">((244, 244, 244), (0, 123, 255)):</span> 2.89%<br/>
 <span style="background-color: rgb(240, 240, 240); color: rgb(26, 116, 186)">((240, 240, 240), (26, 116, 186)):</span> 2.89%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(126, 217, 161); color: rgb(142, 140, 153)">NEW CONVERSION: ('GREEN', 'LIGHT'):</span> 2.32%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(126, 217, 161); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('GREEN', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(8, 132, 117); color: rgb(255, 255, 255)">((8, 132, 117), (255, 255, 255)):</span> 16.23%<br/>
@@ -127,9 +140,10 @@
 <span style="background-color: rgb(100, 208, 41); color: rgb(255, 255, 255)">((100, 208, 41), (255, 255, 255)):</span> 3.25%<br/>
 <span style="background-color: rgb(37, 173, 61); color: rgb(255, 255, 255)">((37, 173, 61), (255, 255, 255)):</span> 3.25%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(126, 217, 161); color: rgb(0, 0, 0)">NEW CONVERSION: ('GREEN', 'DEFAULT'):</span> 2.22%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(126, 217, 161); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('GREEN', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(184, 234, 184); color: rgb(60, 64, 67)">((184, 234, 184), (60, 64, 67)):</span> 43.24%<br/>
@@ -143,9 +157,10 @@
 <span style="background-color: rgb(128, 255, 128); color: rgb(0, 0, 0)">((128, 255, 128), (0, 0, 0)):</span> 2.03%<br/>
 <span style="background-color: rgb(40, 167, 69); color: rgb(33, 37, 41)">((40, 167, 69), (33, 37, 41)):</span> 0.68%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(142, 140, 153)">NEW CONVERSION: ('YELLOW', 'LIGHT'):</span> 1.88%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('YELLOW', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(251, 222, 81); color: rgb(255, 255, 255)">((251, 222, 81), (255, 255, 255)):</span> 28.80%<br/>
@@ -159,9 +174,10 @@
 <span style="background-color: rgb(255, 242, 204); color: rgb(102, 102, 102)">((255, 242, 204), (102, 102, 102)):</span> 2.40%<br/>
 <span style="background-color: rgb(255, 255, 0); color: rgb(77, 81, 86)">((255, 255, 0), (77, 81, 86)):</span> 1.60%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(238, 54, 54)">NEW CONVERSION: ('YELLOW', 'RED'):</span> 1.71%<br/>
 <span style="color: rgb(238, 54, 54)">OLD CONVERSION: (DEFAULT, RED)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(238, 54, 54)">PROPOSED CONVERSION ('YELLOW', 'RED')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 255, 0); color: rgb(255, 0, 0)">((255, 255, 0), (255, 0, 0)):</span> 56.14%<br/>
@@ -175,9 +191,10 @@
 <span style="background-color: rgb(255, 255, 153); color: rgb(255, 0, 0)">((255, 255, 153), (255, 0, 0)):</span> 1.75%<br/>
 <span style="background-color: rgb(255, 235, 156); color: rgb(156, 23, 0)">((255, 235, 156), (156, 23, 0)):</span> 1.75%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(245, 139, 13)">NEW CONVERSION: ('YELLOW', 'ORANGE'):</span> 1.31%<br/>
 <span style="color: rgb(245, 139, 13)">OLD CONVERSION: (DEFAULT, ORANGE)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(245, 139, 13)">PROPOSED CONVERSION ('YELLOW', 'ORANGE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 235, 156); color: rgb(156, 101, 0)">((255, 235, 156), (156, 101, 0)):</span> 89.66%<br/>
@@ -187,9 +204,10 @@
 <span style="background-color: rgb(255, 235, 156); color: rgb(255, 103, 0)">((255, 235, 156), (255, 103, 0)):</span> 1.15%<br/>
 <span style="background-color: rgb(248, 243, 211); color: rgb(173, 120, 20)">((248, 243, 211), (173, 120, 20)):</span> 1.15%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 158, 88); color: rgb(142, 140, 153)">NEW CONVERSION: ('ORANGE', 'LIGHT'):</span> 1.29%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(255, 158, 88); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('ORANGE', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 169, 2); color: rgb(255, 255, 255)">((255, 169, 2), (255, 255, 255)):</span> 19.77%<br/>
@@ -203,9 +221,10 @@
 <span style="background-color: rgb(138, 75, 8); color: rgb(255, 255, 255)">((138, 75, 8), (255, 255, 255)):</span> 3.49%<br/>
 <span style="background-color: rgb(240, 108, 2); color: rgb(255, 255, 255)">((240, 108, 2), (255, 255, 255)):</span> 2.33%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(250, 136, 121); color: rgb(0, 0, 0)">NEW CONVERSION: ('RED', 'DEFAULT'):</span> 1.26%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(250, 136, 121); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('RED', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 220, 220); color: rgb(0, 0, 0)">((255, 220, 220), (0, 0, 0)):</span> 28.57%<br/>
@@ -219,9 +238,10 @@
 <span style="background-color: rgb(255, 103, 102); color: rgb(0, 0, 0)">((255, 103, 102), (0, 0, 0)):</span> 2.38%<br/>
 <span style="background-color: rgb(255, 191, 194); color: rgb(5, 5, 5)">((255, 191, 194), (5, 5, 5)):</span> 1.19%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(146, 180, 255); color: rgb(0, 0, 0)">NEW CONVERSION: ('BLUE', 'DEFAULT'):</span> 1.23%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(146, 180, 255); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('BLUE', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(227, 243, 255); color: rgb(0, 0, 0)">((227, 243, 255), (0, 0, 0)):</span> 28.05%<br/>
@@ -235,9 +255,10 @@
 <span style="background-color: rgb(207, 247, 252); color: rgb(50, 63, 75)">((207, 247, 252), (50, 63, 75)):</span> 2.44%<br/>
 <span style="background-color: rgb(159, 217, 247); color: rgb(0, 0, 0)">((159, 217, 247), (0, 0, 0)):</span> 2.44%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(238, 54, 54)">NEW CONVERSION: ('GRAY', 'RED'):</span> 1.08%<br/>
 <span style="color: rgb(238, 54, 54)">OLD CONVERSION: (DEFAULT, RED)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(238, 54, 54)">PROPOSED CONVERSION ('DEFAULT', 'RED')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(238, 238, 238); color: rgb(178, 6, 0)">((238, 238, 238), (178, 6, 0)):</span> 75.00%<br/>
@@ -248,9 +269,10 @@
 <span style="background-color: rgb(0, 0, 0); color: rgb(255, 0, 0)">((0, 0, 0), (255, 0, 0)):</span> 1.39%<br/>
 <span style="background-color: rgb(220, 220, 220); color: rgb(255, 0, 0)">((220, 220, 220), (255, 0, 0)):</span> 1.39%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(245, 139, 13)">NEW CONVERSION: ('GRAY', 'ORANGE'):</span> 0.89%<br/>
 <span style="color: rgb(245, 139, 13)">OLD CONVERSION: (DEFAULT, ORANGE)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(245, 139, 13)">PROPOSED CONVERSION ('DEFAULT', 'ORANGE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(0, 70, 121); color: rgb(255, 255, 0)">((0, 70, 121), (255, 255, 0)):</span> 15.25%<br/>
@@ -264,9 +286,10 @@
 <span style="background-color: rgb(48, 21, 4); color: rgb(252, 185, 0)">((48, 21, 4), (252, 185, 0)):</span> 5.08%<br/>
 <span style="background-color: rgb(1, 43, 50); color: rgb(250, 197, 28)">((1, 43, 50), (250, 197, 28)):</span> 5.08%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 158, 88); color: rgb(0, 0, 0)">NEW CONVERSION: ('ORANGE', 'DEFAULT'):</span> 0.84%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(255, 158, 88); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('ORANGE', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 235, 215); color: rgb(25, 25, 25)">((255, 235, 215), (25, 25, 25)):</span> 17.86%<br/>
@@ -280,9 +303,10 @@
 <span style="background-color: rgb(255, 153, 0); color: rgb(0, 0, 0)">((255, 153, 0), (0, 0, 0)):</span> 3.57%<br/>
 <span style="background-color: rgb(232, 126, 4); color: rgb(0, 0, 0)">((232, 126, 4), (0, 0, 0)):</span> 3.57%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(142, 140, 153)">NEW CONVERSION: ('PINK', 'LIGHT'):</span> 0.66%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('PINK', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(131, 67, 144); color: rgb(255, 255, 255)">((131, 67, 144), (255, 255, 255)):</span> 25.00%<br/>
@@ -296,9 +320,10 @@
 <span style="background-color: rgb(255, 0, 119); color: rgb(255, 255, 255)">((255, 0, 119), (255, 255, 255)):</span> 2.27%<br/>
 <span style="background-color: rgb(201, 29, 149); color: rgb(255, 255, 255)">((201, 29, 149), (255, 255, 255)):</span> 2.27%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(126, 217, 161); color: rgb(35, 108, 243)">NEW CONVERSION: ('GREEN', 'BLUE'):</span> 0.65%<br/>
 <span style="color: rgb(35, 108, 243)">OLD CONVERSION: (DEFAULT, BLUE)</span><br/>
+<span style="background-color: rgb(126, 217, 161); color: rgb(35, 108, 243)">PROPOSED CONVERSION ('GREEN', 'BLUE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(100, 208, 41); color: rgb(0, 104, 165)">((100, 208, 41), (0, 104, 165)):</span> 23.26%<br/>
@@ -308,9 +333,10 @@
 <span style="background-color: rgb(184, 234, 184); color: rgb(17, 85, 204)">((184, 234, 184), (17, 85, 204)):</span> 11.63%<br/>
 <span style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 255)">((0, 255, 0), (0, 0, 255)):</span> 4.65%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(146, 180, 255); color: rgb(35, 108, 243)">NEW CONVERSION: ('BLUE', 'BLUE'):</span> 0.48%<br/>
 <span style="color: rgb(35, 108, 243)">OLD CONVERSION: (DEFAULT, BLUE)</span><br/>
+<span style="background-color: rgb(146, 180, 255); color: rgb(35, 108, 243)">PROPOSED CONVERSION ('BLUE', 'BLUE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(224, 241, 255); color: rgb(0, 86, 179)">((224, 241, 255), (0, 86, 179)):</span> 31.25%<br/>
@@ -324,26 +350,29 @@
 <span style="background-color: rgb(232, 238, 255); color: rgb(96, 137, 255)">((232, 238, 255), (96, 137, 255)):</span> 3.12%<br/>
 <span style="background-color: rgb(91, 83, 226); color: rgb(111, 168, 220)">((91, 83, 226), (111, 168, 220)):</span> 3.12%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(126, 217, 161); color: rgb(245, 139, 13)">NEW CONVERSION: ('GREEN', 'ORANGE'):</span> 0.47%<br/>
 <span style="color: rgb(245, 139, 13)">OLD CONVERSION: (DEFAULT, ORANGE)</span><br/>
+<span style="background-color: rgb(126, 217, 161); color: rgb(245, 139, 13)">PROPOSED CONVERSION ('GREEN', 'ORANGE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(184, 234, 184); color: rgb(255, 102, 51)">((184, 234, 184), (255, 102, 51)):</span> 96.77%<br/>
 <span style="background-color: rgb(22, 145, 121); color: rgb(251, 238, 184)">((22, 145, 121), (251, 238, 184)):</span> 3.23%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(245, 139, 13)">NEW CONVERSION: ('PINK', 'ORANGE'):</span> 0.47%<br/>
 <span style="color: rgb(245, 139, 13)">OLD CONVERSION: (DEFAULT, ORANGE)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(245, 139, 13)">PROPOSED CONVERSION ('PINK', 'ORANGE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(212, 14, 140); color: rgb(255, 255, 0)">((212, 14, 140), (255, 255, 0)):</span> 90.32%<br/>
 <span style="background-color: rgb(235, 211, 225); color: rgb(253, 192, 48)">((235, 211, 225), (253, 192, 48)):</span> 6.45%<br/>
 <span style="background-color: rgb(255, 30, 109); color: rgb(252, 255, 45)">((255, 30, 109), (252, 255, 45)):</span> 3.23%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(235, 63, 176)">NEW CONVERSION: ('GRAY', 'PINK'):</span> 0.21%<br/>
 <span style="color: rgb(235, 63, 176)">OLD CONVERSION: (DEFAULT, PINK)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(235, 63, 176)">PROPOSED CONVERSION ('DEFAULT', 'PINK')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(229, 229, 229); color: rgb(119, 0, 136)">((229, 229, 229), (119, 0, 136)):</span> 64.29%<br/>
@@ -352,16 +381,18 @@
 <span style="background-color: rgb(0, 0, 0); color: rgb(255, 0, 102)">((0, 0, 0), (255, 0, 102)):</span> 7.14%<br/>
 <span style="background-color: rgb(0, 0, 0); color: rgb(149, 79, 114)">((0, 0, 0), (149, 79, 114)):</span> 7.14%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(146, 180, 255); color: rgb(16, 193, 151)">NEW CONVERSION: ('BLUE', 'GREEN'):</span> 0.21%<br/>
 <span style="color: rgb(16, 193, 151)">OLD CONVERSION: (DEFAULT, GREEN)</span><br/>
+<span style="background-color: rgb(146, 180, 255); color: rgb(16, 193, 151)">PROPOSED CONVERSION ('BLUE', 'GREEN')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(0, 255, 255); color: rgb(84, 130, 53)">((0, 255, 255), (84, 130, 53)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(200, 140, 255); color: rgb(142, 140, 153)">NEW CONVERSION: ('PURPLE', 'LIGHT'):</span> 0.18%<br/>
 <span style="color: rgb(142, 140, 153)">OLD CONVERSION: (DEFAULT, LIGHT)</span><br/>
+<span style="background-color: rgb(200, 140, 255); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('PURPLE', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(153, 76, 230); color: rgb(255, 255, 255)">((153, 76, 230), (255, 255, 255)):</span> 33.33%<br/>
@@ -372,35 +403,39 @@
 <span style="background-color: rgb(57, 1, 241); color: rgb(255, 255, 255)">((57, 1, 241), (255, 255, 255)):</span> 8.33%<br/>
 <span style="background-color: rgb(110, 52, 233); color: rgb(255, 255, 255)">((110, 52, 233), (255, 255, 255)):</span> 8.33%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(0, 0, 0)">NEW CONVERSION: ('PINK', 'DEFAULT'):</span> 0.15%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('PINK', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 0, 255); color: rgb(0, 0, 0)">((255, 0, 255), (0, 0, 0)):</span> 60.00%<br/>
 <span style="background-color: rgb(255, 128, 255); color: rgb(0, 0, 0)">((255, 128, 255), (0, 0, 0)):</span> 40.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(16, 193, 151)">NEW CONVERSION: ('YELLOW', 'GREEN'):</span> 0.14%<br/>
 <span style="color: rgb(16, 193, 151)">OLD CONVERSION: (DEFAULT, GREEN)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(16, 193, 151)">PROPOSED CONVERSION ('YELLOW', 'GREEN')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 255, 0); color: rgb(76, 175, 80)">((255, 255, 0), (76, 175, 80)):</span> 66.67%<br/>
 <span style="background-color: rgb(255, 255, 204); color: rgb(22, 160, 133)">((255, 255, 204), (22, 160, 133)):</span> 22.22%<br/>
 <span style="background-color: rgb(255, 217, 102); color: rgb(0, 128, 0)">((255, 217, 102), (0, 128, 0)):</span> 11.11%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(126, 217, 161); color: rgb(16, 193, 151)">NEW CONVERSION: ('GREEN', 'GREEN'):</span> 0.14%<br/>
 <span style="color: rgb(16, 193, 151)">OLD CONVERSION: (DEFAULT, GREEN)</span><br/>
+<span style="background-color: rgb(126, 217, 161); color: rgb(16, 193, 151)">PROPOSED CONVERSION ('GREEN', 'GREEN')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(225, 251, 248); color: rgb(0, 179, 159)">((225, 251, 248), (0, 179, 159)):</span> 44.44%<br/>
 <span style="background-color: rgb(230, 247, 233); color: rgb(76, 175, 80)">((230, 247, 233), (76, 175, 80)):</span> 44.44%<br/>
 <span style="background-color: rgb(0, 255, 0); color: rgb(111, 192, 64)">((0, 255, 0), (111, 192, 64)):</span> 11.11%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(146, 180, 255); color: rgb(245, 139, 13)">NEW CONVERSION: ('BLUE', 'ORANGE'):</span> 0.12%<br/>
 <span style="color: rgb(245, 139, 13)">OLD CONVERSION: (DEFAULT, ORANGE)</span><br/>
+<span style="background-color: rgb(146, 180, 255); color: rgb(245, 139, 13)">PROPOSED CONVERSION ('BLUE', 'ORANGE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 0)">((0, 0, 255), (255, 255, 0)):</span> 62.50%<br/>
@@ -408,9 +443,10 @@
 <span style="background-color: rgb(0, 109, 161); color: rgb(255, 191, 0)">((0, 109, 161), (255, 191, 0)):</span> 12.50%<br/>
 <span style="background-color: rgb(0, 70, 184); color: rgb(255, 241, 143)">((0, 70, 184), (255, 241, 143)):</span> 12.50%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(146, 180, 255); color: rgb(238, 54, 54)">NEW CONVERSION: ('BLUE', 'RED'):</span> 0.12%<br/>
 <span style="color: rgb(238, 54, 54)">OLD CONVERSION: (DEFAULT, RED)</span><br/>
+<span style="background-color: rgb(146, 180, 255); color: rgb(238, 54, 54)">PROPOSED CONVERSION ('BLUE', 'RED')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(240, 246, 252); color: rgb(230, 57, 70)">((240, 246, 252), (230, 57, 70)):</span> 62.50%<br/>
@@ -418,9 +454,10 @@
 <span style="background-color: rgb(91, 83, 226); color: rgb(244, 67, 54)">((91, 83, 226), (244, 67, 54)):</span> 12.50%<br/>
 <span style="background-color: rgb(224, 255, 255); color: rgb(205, 92, 92)">((224, 255, 255), (205, 92, 92)):</span> 12.50%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(250, 136, 121); color: rgb(238, 54, 54)">NEW CONVERSION: ('RED', 'RED'):</span> 0.11%<br/>
 <span style="color: rgb(238, 54, 54)">OLD CONVERSION: (DEFAULT, RED)</span><br/>
+<span style="background-color: rgb(250, 136, 121); color: rgb(238, 54, 54)">PROPOSED CONVERSION ('RED', 'RED')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 191, 194); color: rgb(255, 0, 17)">((255, 191, 194), (255, 0, 17)):</span> 14.29%<br/>
@@ -431,92 +468,104 @@
 <span style="background-color: rgb(223, 1, 0); color: rgb(223, 1, 0)">((223, 1, 0), (223, 1, 0)):</span> 14.29%<br/>
 <span style="background-color: rgb(254, 242, 242); color: rgb(239, 68, 68)">((254, 242, 242), (239, 68, 68)):</span> 14.29%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 158, 88); color: rgb(16, 193, 151)">NEW CONVERSION: ('ORANGE', 'GREEN'):</span> 0.09%<br/>
 <span style="color: rgb(16, 193, 151)">OLD CONVERSION: (DEFAULT, GREEN)</span><br/>
+<span style="background-color: rgb(255, 158, 88); color: rgb(16, 193, 151)">PROPOSED CONVERSION ('ORANGE', 'GREEN')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(252, 245, 239); color: rgb(11, 97, 11)">((252, 245, 239), (11, 97, 11)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(250, 136, 121); color: rgb(245, 139, 13)">NEW CONVERSION: ('RED', 'ORANGE'):</span> 0.09%<br/>
 <span style="color: rgb(245, 139, 13)">OLD CONVERSION: (DEFAULT, ORANGE)</span><br/>
+<span style="background-color: rgb(250, 136, 121); color: rgb(245, 139, 13)">PROPOSED CONVERSION ('RED', 'ORANGE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 0, 0); color: rgb(255, 255, 0)">((255, 0, 0), (255, 255, 0)):</span> 33.33%<br/>
 <span style="background-color: rgb(255, 0, 1); color: rgb(255, 255, 0)">((255, 0, 1), (255, 255, 0)):</span> 33.33%<br/>
 <span style="background-color: rgb(255, 0, 0); color: rgb(255, 242, 204)">((255, 0, 0), (255, 242, 204)):</span> 33.33%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 158, 88); color: rgb(35, 108, 243)">NEW CONVERSION: ('ORANGE', 'BLUE'):</span> 0.06%<br/>
 <span style="color: rgb(35, 108, 243)">OLD CONVERSION: (DEFAULT, BLUE)</span><br/>
+<span style="background-color: rgb(255, 158, 88); color: rgb(35, 108, 243)">PROPOSED CONVERSION ('ORANGE', 'BLUE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 153, 0); color: rgb(0, 104, 165)">((255, 153, 0), (0, 104, 165)):</span> 50.00%<br/>
 <span style="background-color: rgb(246, 233, 216); color: rgb(46, 110, 158)">((246, 233, 216), (46, 110, 158)):</span> 25.00%<br/>
 <span style="background-color: rgb(244, 125, 32); color: rgb(31, 73, 125)">((244, 125, 32), (31, 73, 125)):</span> 25.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(235, 63, 176)">NEW CONVERSION: ('YELLOW', 'PINK'):</span> 0.06%<br/>
 <span style="color: rgb(235, 63, 176)">OLD CONVERSION: (DEFAULT, PINK)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(235, 63, 176)">PROPOSED CONVERSION ('YELLOW', 'PINK')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 229, 153); color: rgb(191, 36, 80)">((255, 229, 153), (191, 36, 80)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(200, 140, 255); color: rgb(0, 0, 0)">NEW CONVERSION: ('PURPLE', 'DEFAULT'):</span> 0.06%<br/>
 <span style="color: rgb(0, 0, 0)">OLD CONVERSION: (DEFAULT, DEFAULT)</span><br/>
+<span style="background-color: rgb(200, 140, 255); color: rgb(0, 0, 0)">PROPOSED CONVERSION ('PURPLE', 'DEFAULT')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(224, 205, 255); color: rgb(0, 0, 0)">((224, 205, 255), (0, 0, 0)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(238, 54, 54)">NEW CONVERSION: ('PINK', 'RED'):</span> 0.05%<br/>
 <span style="color: rgb(238, 54, 54)">OLD CONVERSION: (DEFAULT, RED)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(238, 54, 54)">PROPOSED CONVERSION ('PINK', 'RED')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(235, 211, 225); color: rgb(205, 89, 55)">((235, 211, 225), (205, 89, 55)):</span> 66.67%<br/>
 <span style="background-color: rgb(235, 211, 225); color: rgb(182, 66, 76)">((235, 211, 225), (182, 66, 76)):</span> 33.33%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(35, 108, 243)">NEW CONVERSION: ('PINK', 'BLUE'):</span> 0.03%<br/>
 <span style="color: rgb(35, 108, 243)">OLD CONVERSION: (DEFAULT, BLUE)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(35, 108, 243)">PROPOSED CONVERSION ('PINK', 'BLUE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(235, 211, 225); color: rgb(30, 83, 163)">((235, 211, 225), (30, 83, 163)):</span> 50.00%<br/>
 <span style="background-color: rgb(234, 209, 220); color: rgb(0, 0, 255)">((234, 209, 220), (0, 0, 255)):</span> 50.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 158, 88); color: rgb(238, 54, 54)">NEW CONVERSION: ('ORANGE', 'RED'):</span> 0.03%<br/>
 <span style="color: rgb(238, 54, 54)">OLD CONVERSION: (DEFAULT, RED)</span><br/>
+<span style="background-color: rgb(255, 158, 88); color: rgb(238, 54, 54)">PROPOSED CONVERSION ('ORANGE', 'RED')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(251, 231, 220); color: rgb(195, 12, 16)">((251, 231, 220), (195, 12, 16)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(235, 63, 176)">NEW CONVERSION: ('PINK', 'PINK'):</span> 0.02%<br/>
 <span style="color: rgb(235, 63, 176)">OLD CONVERSION: (DEFAULT, PINK)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(235, 63, 176)">PROPOSED CONVERSION ('PINK', 'PINK')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(235, 211, 225); color: rgb(165, 57, 122)">((235, 211, 225), (165, 57, 122)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 128, 186); color: rgb(16, 193, 151)">NEW CONVERSION: ('PINK', 'GREEN'):</span> 0.02%<br/>
 <span style="color: rgb(16, 193, 151)">OLD CONVERSION: (DEFAULT, GREEN)</span><br/>
+<span style="background-color: rgb(255, 128, 186); color: rgb(16, 193, 151)">PROPOSED CONVERSION ('PINK', 'GREEN')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(235, 211, 225); color: rgb(43, 155, 98)">((235, 211, 225), (43, 155, 98)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(235, 234, 235); color: rgb(16, 193, 151)">NEW CONVERSION: ('GRAY', 'GREEN'):</span> 0.02%<br/>
 <span style="color: rgb(16, 193, 151)">OLD CONVERSION: (DEFAULT, GREEN)</span><br/>
+<span style="background-color: rgb(255, 255, 255); color: rgb(16, 193, 151)">PROPOSED CONVERSION ('DEFAULT', 'GREEN')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(241, 241, 241); color: rgb(102, 153, 0)">((241, 241, 241), (102, 153, 0)):</span> 100.00%<br/>
 </p>
-<p style="font-size: 1.4rem">
+<p style="font-size: 1.2rem">
 <span style="background-color: rgb(255, 191, 51); color: rgb(130, 63, 240)">NEW CONVERSION: ('YELLOW', 'PURPLE'):</span> 0.02%<br/>
 <span style="color: rgb(130, 63, 240)">OLD CONVERSION: (DEFAULT, PURPLE)</span><br/>
+<span style="background-color: rgb(255, 191, 51); color: rgb(130, 63, 240)">PROPOSED CONVERSION ('YELLOW', 'PURPLE')</span><br/>
 </p>
 <p style="margin-left:24px">
 <span style="background-color: rgb(255, 255, 0); color: rgb(102, 0, 255)">((255, 255, 0), (102, 0, 255)):</span> 100.00%<br/>
