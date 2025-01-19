@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebXR Test</title>
+</head>
+<body>
+  <button id="start">Enter XR</button>
+  <script>
+    document.getElementById('start').addEventListener('click', async () => {
+      if (navigator.xr) {
+        const supported = await navigator.xr.isSessionSupported('immersive-vr');
+        if (supported) {
+          alert('WebXR is supported!');
+        } else {
+          alert('WebXR is available, but immersive-vr sessions are not supported.');
+        }
+      } else {
+        alert('WebXR is not supported in this browser.');
+      }
+    });
+  </script>
+</body>
+</html>
