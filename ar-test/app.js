@@ -1,22 +1,36 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js';
 
 let xrSession = null;
-let renderer, scene, camera;
+let renderer, scene, camera, referenceSpace;
 
 async function initWebXR() {
-  try {
-    xrSession = await navigator.xr.requestSession('immersive-ar', {
-      requiredFeatures: ['local', 'hit-test']
-    });
-
-    setupRenderer();
-
-    xrSession.updateRenderState({ baseLayer: new XRWebGLLayer(xrSession, renderer.getContext()) });
-    xrSession.requestAnimationFrame(onXRFrame);
-
-  } catch (error) {
-    console.error("WebXR AR session failed to start:", error);
+  if (!navigator.xr) {
+    console.error("WebXR not supported.");
+    return;
   }
+
+  const isARSupported = await navigator.xr.isSessionSupported('immersive-ar');
+  if (!isARSupported) {
+    console.error("AR session not supported.");
+    return;
+  }
+
+  // Request AR session
+  xrSession = await navigator.xr.requestSession('immersive-ar', { requiredFeatures: ['local'] });
+
+  // Initialize WebGL and Three.js
+  setupRenderer();
+
+  // Set the base layer
+  xrSession.updateRenderState({
+    baseLayer: new XRWebGLLayer(xrSession, renderer.getContext()),
+  });
+
+  // Request reference space
+  referenceSpace = await xrSession.requestReferenceSpace('local');
+
+  // Start the animation loop
+  xrSession.requestAnimationFrame(onXRFrame);
 }
 
 function setupRenderer() {
@@ -39,7 +53,7 @@ function onXRFrame(time, frame) {
   const glLayer = session.renderState.baseLayer;
   renderer.setFramebuffer(glLayer.framebuffer);
 
-  const pose = frame.getViewerPose(xrSession.renderState.baseReferenceSpace);
+  const pose = frame.getViewerPose(referenceSpace);
   if (pose) {
     const view = pose.views[0];
     camera.matrix.fromArray(view.transform.matrix);
@@ -49,16 +63,10 @@ function onXRFrame(time, frame) {
 
   renderer.clear();
   renderer.render(scene, camera);
+
   session.requestAnimationFrame(onXRFrame);
 }
 
-// Attach event listener to the button
 document.getElementById('enter-ar').addEventListener('click', () => {
-  if (navigator.xr) {
-    initWebXR();
-  } else {
-    console.error("WebXR not supported in this browser.");
-  }
+  initWebXR();
 });
-
-console.log('Hello world.');
