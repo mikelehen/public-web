@@ -30,7 +30,7 @@ function planck(wlNm, tempK) {
 
 function blackbody(tempK) {
   const pts = []; let max = 0;
-  for (let wl = 380; wl <= 780; wl += 2) {
+  for (let wl = 100; wl <= 1000; wl += 2) {
     const v = planck(wl, tempK);
     if (v > max) max = v;
     pts.push({ wavelength: wl, intensity: v });
@@ -44,7 +44,7 @@ function gauss(x, mean, sigma) {
 
 function fluorescent() {
   const pts = []; let max = 0;
-  for (let wl = 380; wl <= 780; wl += 2) {
+  for (let wl = 100; wl <= 1000; wl += 2) {
     let v = 0.15 + 0.08 * gauss(wl, 545, 60) + 0.06 * gauss(wl, 610, 40);
     v += 0.6 * gauss(wl, 405, 3) + 0.35 * gauss(wl, 436, 3);
     v += 1.0 * gauss(wl, 546, 4) + 0.5 * gauss(wl, 578, 4) + 0.15 * gauss(wl, 612, 3);
@@ -57,7 +57,7 @@ function fluorescent() {
 
 function ledWarm() {
   const pts = []; let max = 0;
-  for (let wl = 380; wl <= 780; wl += 2) {
+  for (let wl = 100; wl <= 1000; wl += 2) {
     const v = 0.7 * gauss(wl, 450, 12) + 1.0 * gauss(wl, 580, 70) + 0.3 * gauss(wl, 630, 50);
     if (v > max) max = v;
     pts.push({ wavelength: wl, intensity: v });
@@ -67,7 +67,7 @@ function ledWarm() {
 
 function ledCool() {
   const pts = []; let max = 0;
-  for (let wl = 380; wl <= 780; wl += 2) {
+  for (let wl = 100; wl <= 1000; wl += 2) {
     const v = 1.0 * gauss(wl, 450, 12) + 0.7 * gauss(wl, 555, 65) + 0.15 * gauss(wl, 610, 45);
     if (v > max) max = v;
     pts.push({ wavelength: wl, intensity: v });
@@ -90,6 +90,7 @@ function getSpectrum(id) {
 }
 
 function wlToColor(wl) {
+  if (wl < 380 || wl > 780) return "rgb(40,40,40)";
   let r=0, g=0, b=0;
   if (wl>=380 && wl<440) { r=-(wl-440)/(440-380); b=1; }
   else if (wl>=440 && wl<490) { g=(wl-440)/(490-440); b=1; }
@@ -123,7 +124,7 @@ function SpectrumChart({ sources }) {
   useEffect(() => {
     if (!canvasRef.current) return;
     const enabled = sources.filter(s => s.on);
-    const wavelengths = Array.from({ length: Math.floor((780-380)/2)+1 }, (_,i) => 380+i*2);
+    const wavelengths = Array.from({ length: Math.floor((1000-100)/2)+1 }, (_,i) => 100+i*2);
     const datasets = enabled.map(s => {
       const spec = getSpectrum(s.id);
       return { label:s.name, data:spec.map(p=>p.intensity), borderColor:s.color, backgroundColor:s.color+'18', borderWidth:2.5, pointRadius:0, tension:0.3, fill:false };
@@ -150,7 +151,7 @@ function SpectrumChart({ sources }) {
             }
           },
           scales: {
-            x:{ title:{display:true,text:'Wavelength (nm)',color:'#a6adba',font:{size:13,weight:'bold'}}, ticks:{color:'#a6adba',autoSkip:false,callback:function(v,i){const wl=wavelengths[i];return wl%50===0?wl:''}}, grid:{color:'rgba(255,255,255,0.06)'} },
+            x:{ title:{display:true,text:'Wavelength (nm)',color:'#a6adba',font:{size:13,weight:'bold'}}, ticks:{color:'#a6adba',autoSkip:false,callback:function(v,i){const wl=wavelengths[i];return wl%100===0?wl:''}}, grid:{color:'rgba(255,255,255,0.06)'} },
             y:{ title:{display:true,text:'Relative Intensity',color:'#a6adba',font:{size:13,weight:'bold'}}, min:0, max:1.05, ticks:{color:'#a6adba',callback:(v)=>Math.round(v*100)+'%'}, grid:{color:'rgba(255,255,255,0.06)'} }
           }
         },
@@ -204,7 +205,7 @@ function App() {
   return h('div',{className:'p-4 flex flex-col gap-4 min-h-screen bg-base-100 max-w-5xl mx-auto'},
     h('h1',{className:'text-2xl font-bold text-base-content'},'🌈 Light Spectrum Explorer'),
     h('p',{className:'text-sm text-base-content/60'},
-      'Compare the spectral power distributions of natural and artificial light sources across the visible spectrum (380–780 nm).'
+      'Compare the spectral power distributions of natural and artificial light sources across the visible spectrum (380–780 nm), chart extended to 100–1000 nm to show UV and IR regions.'
     ),
     h('div',{className:'flex flex-col gap-3'},
       h('div',null,
@@ -243,9 +244,9 @@ function App() {
           h('a',{href:'https://evidentscientific.com/en/microscope-resource/knowledge-hub/lightandcolor/lightsourcesintro',target:'_blank',className:'link link-primary'},'Evident Scientific — Sources of Visible Light'),
           ' and ',
           h('a',{href:'https://www.researchgate.net/figure/Spectral-power-distribution-SPD-of-common-light-sources-at-100-lx-in-the-rage-of-400-nm_fig1_351659028',target:'_blank',className:'link link-primary'},'ResearchGate — SPD of Common Light Sources')),
-        h('li',null,h('strong',null,'Wavelength-to-Color Mapping'),' — Based on CIE 1931 standard observer approximations for visible spectrum (380–780 nm).')
+        h('li',null,h('strong',null,'Wavelength-to-Color Mapping'),' — Based on CIE 1931 standard observer approximations for visible spectrum (380–780 nm), chart extended to 100–1000 nm to show UV and IR regions.')
       ),
-      h('p',{className:'text-xs text-base-content/50 mt-1'},'Note: Spectra are normalized to relative intensity for visual comparison. Blackbody curves use Planck's radiation law; fluorescent and LED profiles are modeled approximations based on published empirical data.')
+      h('p',{className:'text-xs text-base-content/50 mt-1'},'Note: Spectra are normalized to relative intensity for visual comparison. Blackbody curves use Planck\'s radiation law; fluorescent and LED profiles are modeled approximations based on published empirical data.')
     )),
     h('div',{className:'text-center text-xs text-base-content/30 pb-4'},'Built with Tasklet AI')
   );
