@@ -228,6 +228,25 @@ function App() {
         h('li',null,h('strong',null,'Cool white LEDs'),' have the most prominent blue spike, which can feel harsh and affect sleep cycles.')
       )
     )),
+    h('div',{className:'card bg-base-200'},h('div',{className:'card-body p-4 gap-2'},
+      h('h3',{className:'text-sm font-semibold text-base-content'},'References & Data Sources'),
+      h('ul',{className:'text-xs text-base-content/70 list-disc list-inside space-y-1.5'},
+        h('li',null,h('strong',null,'Planck\'s Law / Blackbody Radiation'),' — Used to model sunlight (5778 K), sunset (~2500 K), fire (~1800 K), incandescent (2700 K), and halogen (3100 K) spectra. See: ',
+          h('a',{href:'https://www.pveducation.org/pvcdrom/properties-of-sunlight/blackbody-radiation',target:'_blank',className:'link link-primary'},'PV Education — Blackbody Radiation')),
+        h('li',null,h('strong',null,'Solar Spectrum & Color Temperature'),' — Sun modeled as 5778 K blackbody per standard solar physics. ',
+          h('a',{href:'https://en.wikipedia.org/wiki/Color_temperature',target:'_blank',className:'link link-primary'},'Wikipedia — Color Temperature')),
+        h('li',null,h('strong',null,'Fluorescent Lamp SPD'),' — Mercury vapor emission lines at 405, 436, 546, and 578 nm with tri-phosphor coating modeled from published spectral data. See: ',
+          h('a',{href:'https://dothemath.ucsd.edu/2012/05/spectral-extravaganza-the-ultimate-light/',target:'_blank',className:'link link-primary'},'Do the Math — Spectral Extravaganza (UCSD)')),
+        h('li',null,h('strong',null,'LED Spectral Profiles'),' — Blue pump diode (~450 nm) + phosphor emission modeled from typical manufacturer SPD curves. See: ',
+          h('a',{href:'https://www.energy.gov/sites/prod/files/2016/11/f34/royer_spectral-power-dist_denver2016.pdf',target:'_blank',className:'link link-primary'},'U.S. DOE — Spectral Power Distribution (PDF)')),
+        h('li',null,h('strong',null,'General Light Source Spectra'),' — Cross-referenced with: ',
+          h('a',{href:'https://evidentscientific.com/en/microscope-resource/knowledge-hub/lightandcolor/lightsourcesintro',target:'_blank',className:'link link-primary'},'Evident Scientific — Sources of Visible Light'),
+          ' and ',
+          h('a',{href:'https://www.researchgate.net/figure/Spectral-power-distribution-SPD-of-common-light-sources-at-100-lx-in-the-rage-of-400-nm_fig1_351659028',target:'_blank',className:'link link-primary'},'ResearchGate — SPD of Common Light Sources')),
+        h('li',null,h('strong',null,'Wavelength-to-Color Mapping'),' — Based on CIE 1931 standard observer approximations for visible spectrum (380–780 nm).')
+      ),
+      h('p',{className:'text-xs text-base-content/50 mt-1'},'Note: Spectra are normalized to relative intensity for visual comparison. Blackbody curves use Planck\\'s radiation law; fluorescent and LED profiles are modeled approximations based on published empirical data.')
+    )),
     h('div',{className:'text-center text-xs text-base-content/30 pb-4'},'Built with Tasklet AI')
   );
 }
