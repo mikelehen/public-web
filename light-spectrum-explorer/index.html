@@ -150,7 +150,7 @@ function SpectrumChart({ sources }) {
             }
           },
           scales: {
-            x:{ title:{display:true,text:'Wavelength (nm)',color:'#a6adba',font:{size:13,weight:'bold'}}, ticks:{color:'#a6adba',maxTicksLimit:20,callback:function(v,i){const wl=wavelengths[i];return wl%40===0?wl:''}}, grid:{color:'rgba(255,255,255,0.06)'} },
+            x:{ title:{display:true,text:'Wavelength (nm)',color:'#a6adba',font:{size:13,weight:'bold'}}, ticks:{color:'#a6adba',autoSkip:false,callback:function(v,i){const wl=wavelengths[i];return wl%50===0?wl:''}}, grid:{color:'rgba(255,255,255,0.06)'} },
             y:{ title:{display:true,text:'Relative Intensity',color:'#a6adba',font:{size:13,weight:'bold'}}, min:0, max:1.05, ticks:{color:'#a6adba',callback:(v)=>Math.round(v*100)+'%'}, grid:{color:'rgba(255,255,255,0.06)'} }
           }
         },
